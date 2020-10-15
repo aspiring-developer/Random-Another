@@ -26,9 +26,15 @@ namespace asp_net_pro_1
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseFileServer();
+            app.UseRouting();
 
-           
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello World!");
+                });
+            });
         }
     }
 }
