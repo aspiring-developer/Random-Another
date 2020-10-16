@@ -1,4 +1,6 @@
-﻿namespace Practice_10162020_1_dani
+﻿using System;
+
+namespace Practice_10162020_1_dani
 {
     class Program
     {
@@ -11,6 +13,12 @@
             person.HasPet = true;
 
             person.Greeting();
+
+            // The above codes are from Person class.
+            // The below are from Calculator class.
+            int result = Calculator.Add(5, 10);
+            Console.WriteLine("This is from Calculator class: " + result);
         }
+
     }
 }
