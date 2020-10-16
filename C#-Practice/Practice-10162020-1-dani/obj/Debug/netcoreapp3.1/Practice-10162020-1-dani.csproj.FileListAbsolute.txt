@@ -1,0 +1,13 @@
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.exe
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.deps.json
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.runtimeconfig.json
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.runtimeconfig.dev.json
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.dll
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\bin\Debug\netcoreapp3.1\Practice-10162020-1-dani.pdb
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.csprojAssemblyReference.cache
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.AssemblyInfoInputs.cache
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.AssemblyInfo.cs
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.csproj.CoreCompileInputs.cache
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.dll
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.pdb
+C:\Users\19197\Dropbox\Random-Another\C#-Practice\Practice-10162020-1-dani\obj\Debug\netcoreapp3.1\Practice-10162020-1-dani.genruntimeconfig.cache
