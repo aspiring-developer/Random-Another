@@ -12,7 +12,7 @@ namespace Practice_10162020_1_dani
             person.Age = 42;
             person.HasPet = true;
 
-            person.Greeting();
+            person.Display();
 
             // The above codes are from Person class.
             // The below are from Calculator class.
