@@ -1,2 +1,2 @@
 # Random-Another
-Random practice. Edited main repo -2.
+Random practice. Change in main repo in GitHub.
