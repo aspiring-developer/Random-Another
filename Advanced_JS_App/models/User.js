@@ -1,5 +1,4 @@
 const usersCollection = require('../db');
-
 let validator = require("validator");
 
 let User = function (data) {
@@ -46,13 +45,20 @@ User.prototype.register = function () {
   this.validate();
 
   if(!this.errors.length) {
-    usersCollection.collection("collection01312021").insertOne(this.data);
+    usersCollection.collection("usersInAdvancedApp").insertOne(this.data);
   }
 }
 
 User.prototype.login = function () {
 console.log("User.prototype.login block")
+this.cleanUp();
+usersCollection.collection("usersInAdvancedApp").findOne({username: this.data.username}, (err, attemptedUser) => {
+if(attemptedUser && attemptedUser.password == this.data.password) {
+  console.log("It is working! Good job!!")
+} else {
+  console.log("Invalid username or password!")
 }
-
+});
+}
 
 module.exports = User;
