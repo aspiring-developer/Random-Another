@@ -8,6 +8,6 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
   let PORT = process.env.PORT || 3000;
    app.listen(PORT, function(req, res) {
     console.log(` App is listening on http://localhost:${PORT} `);
-    console.log("MongoDB connected!");
+    //console.log("MongoDB connected!");
   })
 })

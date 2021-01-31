@@ -50,4 +50,9 @@ User.prototype.register = function () {
   }
 }
 
+User.prototype.login = function () {
+console.log("User.prototype.login block")
+}
+
+
 module.exports = User;
