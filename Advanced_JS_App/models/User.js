@@ -1,58 +1,58 @@
 const usersCollection = require('../db');
 let validator = require("validator");
 
-let User = function (data) {
-  this.data = data;
-  this.errors = [];
+let User = function (formData) {
+  this.userInput = formData;
+  this.errorMessages = [];
 }
 
 User.prototype.cleanUp = function() {
-  if(typeof(this.data.username) != "string") {this.data.username = ""};
-  if(typeof(this.data.email) != "string") {this.data.email = ""};
-  if(typeof(this.data.password) != "string") {this.data.password = ""};
+  if(typeof(this.userInput.username) != "string") {this.userInput.username = ""};
+  if(typeof(this.userInput.email) != "string") {this.userInput.email = ""};
+  if(typeof(this.userInput.password) != "string") {this.userInput.password = ""};
 
-  this.data = {
-    username:this.data.username.trim().toLowerCase(),
-    email:this.data.email.trim().toLowerCase(),
-    password:this.data.password
+  this.userInput = {
+    username:this.userInput.username.trim().toLowerCase(),
+    email:this.userInput.email.trim().toLowerCase(),
+    password:this.userInput.password
   }
 }
 
 User.prototype.validate = function () {
-  if (this.data.username == "") { this.errors.push("You must provide a username") };
-  if (!validator.isEmail(this.data.email)) { this.errors.push("You must provide a valid email") };
-  if (this.data.password == "") { this.errors.push("You must provide a password") };
-  if (this.data.password.length > 0 && this.data.password.length < 12) {
-    this.errors.push("Password must be at least 12 characters long!")
+  if (this.userInput.username == "") { this.errorMessages.push("You must provide a username") };
+  if (!validator.isEmail(this.userInput.email)) { this.errorMessages.push("You must provide a valid email") };
+  if (this.userInput.password == "") { this.errorMessages.push("You must provide a password") };
+  if (this.userInput.password.length > 0 && this.userInput.password.length < 6) {
+    this.errorMessages.push("Password must be at least 6 characters long!")
   };
-  if (this.data.password.length > 50) {
-    this.errors.push("Password must not exceed 50 characters!")
+  if (this.userInput.password.length > 50) {
+    this.errorMessages.push("Password must not exceed 50 characters!")
   };
-  if (this.data.username.length > 0 && this.data.password.length < 3) {
-    this.errors.push("Username must be at least 3 characters long!")
+  if (this.userInput.username.length > 0 && this.userInput.password.length < 3) {
+    this.errorMessages.push("Username must be at least 3 characters long!")
   };
-  if (this.data.username.length > 20) {
-    this.errors.push("Username must not exceed 20 characters!")
+  if (this.userInput.username.length > 20) {
+    this.errorMessages.push("Username must not exceed 20 characters!")
   };
-  if (this.data.username != "" && !validator.isAlphanumeric(this.data.username)) {
-    this.errors.push("Username can only contain letters and numbers!")
+  if (this.userInput.username != "" && !validator.isAlphanumeric(this.userInput.username)) {
+    this.errorMessages.push("Username can only contain letters and numbers!")
   };
 
 }
 
-User.prototype.register = function () {
+User.prototype.registerUser = function () {
   this.cleanUp();
   this.validate();
 
-  if(!this.errors.length) {
-    usersCollection.collection("usersInAdvancedApp").insertOne(this.data);
+  if(!this.errorMessages.length) {
+    usersCollection.collection("usersInAdvancedApp").insertOne(this.userInput);
   }
 }
 
-User.prototype.login = function (callback) {
+User.prototype.loginUser = function (callback) {
 this.cleanUp();
-usersCollection.collection("usersInAdvancedApp").findOne({username: this.data.username}, (err, attemptedUser) => {
-if(attemptedUser && attemptedUser.password == this.data.password) {
+usersCollection.collection("usersInAdvancedApp").findOne({username: this.userInput.username}, (err, attemptedUser) => {
+if(attemptedUser && attemptedUser.password == this.userInput.password) {
   callback("Successfully login!");
 } else {
  callback("Invalid username or password!");

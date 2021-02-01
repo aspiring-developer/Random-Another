@@ -1,23 +1,23 @@
 const User = require("../models/User");
 
-exports.home = function (req, res) {
+exports.homeController = function (req, res) {
   res.render("home-guest");
 };
 
-exports.register = function (req, res) {
+exports.registerController = function (req, res) {
   let user = new User(req.body);
-  user.register(); // this register() is from model (User.js), not from this block
+  user.registerUser(); // this registerUser() is from model (User.js)
   console.log(req.body);
-  if (user.errors.length) {
-    res.send(user.errors)
+  if (user.errorMessages.length) {
+    res.send(user.errorMessages)
   } else {
     res.send("Well done, no errors!")
   }
 };
 
-exports.login = function (req, res) {
+exports.loginController = function (req, res) {
   let user = new User(req.body);
-  user.login(function (result) { // this login() is from model (User.js), not from this block
+  user.loginUser(function (result) { // this loginUser() is from model (User.js)
     res.send(result);
   });
 }
