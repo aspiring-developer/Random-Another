@@ -17,7 +17,7 @@ exports.register = function (req, res) {
 
 exports.login = function (req, res) {
   let user = new User(req.body);
-  user.login(); // this login() is from model (User.js), not from this block
-  console.log("Login feature working!");
-  res.send("Thank you for logging in!")
+  user.login(function (result) { // this login() is from model (User.js), not from this block
+    res.send(result);
+  });
 }

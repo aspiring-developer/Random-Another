@@ -49,14 +49,13 @@ User.prototype.register = function () {
   }
 }
 
-User.prototype.login = function () {
-console.log("User.prototype.login block")
+User.prototype.login = function (callback) {
 this.cleanUp();
 usersCollection.collection("usersInAdvancedApp").findOne({username: this.data.username}, (err, attemptedUser) => {
 if(attemptedUser && attemptedUser.password == this.data.password) {
-  console.log("It is working! Good job!!")
+  callback("Successfully login!");
 } else {
-  console.log("Invalid username or password!")
+ callback("Invalid username or password!");
 }
 });
 }
