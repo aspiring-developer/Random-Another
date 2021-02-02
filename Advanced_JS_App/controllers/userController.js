@@ -15,9 +15,5 @@ exports.registerController = function (req, res) {
   }
 };
 
-exports.loginController = function (req, res) {
-  let user = new User(req.body);
-  user.loginUser(function (result) { // this loginUser() is from model (User.js)
-    res.send(result);
-  });
-}
+
+
