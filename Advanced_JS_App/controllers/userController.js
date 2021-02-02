@@ -15,5 +15,11 @@ exports.registerController = function (req, res) {
   }
 };
 
-
-
+exports.loginController = function (req, res) {
+  let user = new User(req.body);
+  user.loginUser().then(function(result){     // this loginUser() is from model (User.js)
+    res.send(result);
+  }).catch(function(errorMessage) {    // this errMessage points to the reject() message in (User.js)
+    res.send(errorMessage);
+  })
+  };
