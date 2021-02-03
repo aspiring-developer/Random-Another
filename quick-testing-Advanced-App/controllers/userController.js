@@ -1,5 +1,5 @@
-let express = require("express");
-let User = require("../models/User");
+const User = require("../models/User");
+const express = require("express");
 
 exports.homeController = function(req, res) {
   res.render("home-guest");
@@ -7,18 +7,10 @@ exports.homeController = function(req, res) {
 
 exports.registerController = function(req, res) {
   let user = new User(req.body);
-   user.registerUser();
-   res.send(req.body);
-  console.log(req.body);
-  console.log("Well done! No errors!!");
+  user.registerUser();
+  res.send("From registerController file");
 }
 
 exports.loginController = function(req, res) {
-  let user = new User(req.body);
-  user.loginUser().then(function(result){     // this loginUser() is from model (User.js)
-    res.send(result);
-  }).catch(function(errorMessage) {    // this errMessage points to the reject() message in (User.js)
-    res.send(errorMessage);
-  })
-  //console.log(req.body);
-  };
+  res.send("From loginController file");
+}
