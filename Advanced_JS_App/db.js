@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const connectionString = process.env.DATABASE_URI;
 mongodb.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, client) {
-  module.exports = client.db();
+  module.exports = client;
   console.log("MongoDB connected!");
   const app = require('./app');
   let PORT = process.env.PORT || 3030;
