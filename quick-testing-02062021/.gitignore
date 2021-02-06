@@ -1,4 +1,4 @@
-Resources/
 .env
+node_modules
+Resources
 desktop.ini
-node_modules/
