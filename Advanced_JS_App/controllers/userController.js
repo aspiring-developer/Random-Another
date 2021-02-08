@@ -1,11 +1,11 @@
 const User = require("../models/User");
 
 exports.homeController = function (req, res) {
- if(req.session.sessionUser) {
-res.render("home-dashboard", {username: req.session.sessionUser.email});
- } else {
-  res.render("home-guest");
- }
+  if (req.session.user) {
+    res.render("home-dashboard", { username: req.session.user.username });
+  } else {
+    res.render("home-guest", {errors: req.flash("errors")});
+  }
 };
 
 exports.registerController = function (req, res) {
@@ -21,19 +21,23 @@ exports.registerController = function (req, res) {
 
 exports.loginController = function (req, res) {
   let user = new User(req.body);
-  user.loginUser().then(function(result){     // this loginUser() is  from model (User.js)
-     req.session.sessionUser = {myFavoriteSong: "Please", username: sessionUser.userInput.username}
-   res.send(result)
-   }).catch(function(errorMessage) {    // this errMessage points to the reject() message in (User.js)
-    res.send(errorMessage);
+  user.loginUser().then(function (result) {  // this loginUser() is from model (User.js)
+    req.session.user = { myFavoriteSong: "Please", username: user.userInput.username }
+    req.session.save(function() {
+      res.redirect('/');
+    })
+  }).catch(function (errorMessage) {
+    req.flash('errors', errorMessage)  // this errMessage points to the reject() message in (User.js)
+    req.session.save(function() {
+      res.redirect('/');
+    })
+
   })
-  };
+};
 
 exports.logoutController = function (req, res) {
-req.session.destroy(function() {
-  res.redirect("/");
-});
+  req.session.destroy(function () {
+    res.redirect("/");
+  });
 
-    };
-
-
+};

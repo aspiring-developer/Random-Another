@@ -66,9 +66,4 @@ User.prototype.loginUser = function () {
   })
 }
 
-User.prototype.logoutUser = function () {
-
-}
-
-
 module.exports = User;
