@@ -4,7 +4,7 @@ exports.homeController = function (req, res) {
   if (req.session.user) {
     res.render("home-dashboard", { username: req.session.user.username });
   } else {
-    res.render("home-guest", {errors: req.flash("errors")});
+    res.render("home-guest", {errors: req.flash('errors')});
   }
 };
 
@@ -26,18 +26,18 @@ exports.loginController = function (req, res) {
     req.session.save(function() {
       res.redirect('/');
     })
-  }).catch(function (errorMessage) {
-    req.flash('errors', errorMessage)  // this errMessage points to the reject() message in (User.js)
+  }).catch(function (errMessage) {
+      // this errMessage points to the reject() message in (User.js)
+    req.flash('errors', errMessage)
     req.session.save(function() {
       res.redirect('/');
     })
-
-  })
+   })
 };
 
 exports.logoutController = function (req, res) {
   req.session.destroy(function () {
-    res.redirect("/");
+   res.redirect("/");
   });
 
 };
