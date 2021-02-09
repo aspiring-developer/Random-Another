@@ -2,7 +2,7 @@ const User = require("../models/User");
 
 exports.homeController = function (req, res) {
   if (req.session.user) {
-    res.render("home-dashboard", { username: req.session.user.username });
+    res.render("home-dashboard", { username: req.session.user.username, avatar: req.session.user.avatar });
   } else {
     res.render("home-guest", { errors: req.flash('errors'), regErrors: req.flash("regErrors")});
   }
@@ -10,24 +10,25 @@ exports.homeController = function (req, res) {
 
 exports.registerController = function (req, res) {
   let user = new User(req.body);
-  user.registerUser(); // this registerUser() is from model (User.js)
-  console.log(req.body);
-  if (user.errorMessages.length) {
-    user.errorMessages.forEach(function (error) {
-      req.flash("regErrors", error)
-    })
-    req.session.save(function () {
-      res.redirect('/');
-    })
-  } else {
-    res.send("Well done, no errors!")
-  }
+  user.registerUser().then(() => {  // this registerUser() is from model (User.js)
+req.session.user = {username: user.userInput.username, avatar: user.avatar};
+req.session.save(function() {
+  res.redirect('/');
+})
+  }).catch((regErrors) => {
+regErrors.forEach(function(error) {
+  req.flash("regErrors", error);
+})
+req.session.save(function() {
+  res.redirect('/');
+})
+  })
 };
 
 exports.loginController = function (req, res) {
   let user = new User(req.body);
   user.loginUser().then(function (result) {  // this loginUser() is from model (User.js)
-    req.session.user = { myFavoriteSong: "Please", username: user.userInput.username }
+    req.session.user = { avatar: user.avatar, username: user.userInput.username }
     req.session.save(function () {
       res.redirect('/');
     })
