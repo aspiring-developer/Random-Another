@@ -38,6 +38,18 @@ User.prototype.validate = function () {
   if (this.userInput.username != "" && !validator.isAlphanumeric(this.userInput.username)) {
     this.errorMessages.push("Username can only contain letters and numbers!")
   };
+
+  // Checking if the username already exists or not
+  if (this.userInput.username.length > 2 && this.userInput.username.length < 21 && validator.isAlphanumeric(this.userInput.username)) {
+    let usernameExists = usersCollection.collection("usersInAdvancedApp").findOne({ username: this.userInput.username });
+    if (usernameExists) { this.errorMessages.push("The username is already taken; use a unique username.") }
+  };
+
+   // Checking if the email already exists or not
+  if(validator.isEmail(this.userInput.email)) {
+    let emailExists = usersCollection.collection("usersInAdvancedApp").findOne({email: this.userInput.email});
+    if(emailExists) {this.errorMessages.push("The email is already in use, so use another one!")};
+  };
 }
 
 User.prototype.registerUser = function () {
@@ -54,13 +66,13 @@ User.prototype.registerUser = function () {
 User.prototype.loginUser = function () {
   return new Promise((resolve, reject) => {
     this.cleanUp();
-    usersCollection.collection("usersInAdvancedApp").findOne({ username: this.userInput.username}).then((attemptedUser) => {
-      if(attemptedUser && bcrypt.compareSync(this.userInput.password, attemptedUser.password)) {
-          resolve("Successfully login!");
-        } else {
-         reject("Invalid username or password!");
-        }
-    }).catch(function() {
+    usersCollection.collection("usersInAdvancedApp").findOne({ username: this.userInput.username }).then((attemptedUser) => {
+      if (attemptedUser && bcrypt.compareSync(this.userInput.password, attemptedUser.password)) {
+        resolve("Successfully login!");
+      } else {
+        reject("Invalid username or password!");
+      }
+    }).catch(function () {
       reject("Please try again later");
     })
   })
