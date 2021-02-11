@@ -1,0 +1,3 @@
+{
+  "MONGO_URI" : "mongodb+srv://new-user-01302021:NewDatabasePW@cluster0.wuaz2.mongodb.net/mern-full-stack-db?retryWrites=true&w=majority"
+}
