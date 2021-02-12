@@ -1,2 +1,2 @@
 # Random-Another
-* Random practice.
+* Random projects.
