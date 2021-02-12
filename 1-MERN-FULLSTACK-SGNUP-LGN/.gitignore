@@ -1,4 +1,5 @@
-node_modules
+Resources/
 .env
-.desktop.ini
-Resources
+desktop.ini
+node_modules/
+config/default.json
