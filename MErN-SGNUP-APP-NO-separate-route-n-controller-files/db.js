@@ -9,7 +9,6 @@ mongodb.connect(connectionStrings, {useNewUrlParser: true, useUnifiedTopology: t
 
   const PORT = process.env.PORT || 3000;
   const app = require('./app');
-
 app.listen(PORT, function(req, res) {
   console.log(`The app is running on http://localhost:${PORT}`)
 })
