@@ -1,4 +1,4 @@
-const data = [
+export const data =    [
   {
    id: 1,
    img:
@@ -20,6 +20,4 @@ const data = [
    title: 'The Vanishing Half: A Novel',
    author: 'Brit Bennett',
   },
- ];
-
- export default data;
+]
