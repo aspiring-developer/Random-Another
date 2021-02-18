@@ -1,7 +1,13 @@
+import React from 'react';
+import Book from './Book';
+
 function App() {
   return (
-    <div>
-<h1>New app set up display</h1>
+    <div className="container bg-info p-4">
+<h1 className="text-white">New app set up display</h1>
+<p>Below is the book data:</p>
+<Book />
+
     </div>
   );
 }
