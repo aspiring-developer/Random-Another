@@ -4,12 +4,11 @@ function Cart({allData}) {
   return (
     <>
 <p>This is from "Cart" component</p>
-<ul>
+
 {allData.map(singleData => {
-return <li>Title: {singleData.title}, Author: {singleData.author}, Image: {singleData.img} </li>
+return <div>ID: {singleData.id} Title: {singleData.title} Author: {singleData.author} </div>
 })}
-</ul>
-    </>
+</>
   )
 }
 

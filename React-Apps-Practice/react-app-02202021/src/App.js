@@ -1,7 +1,7 @@
 import React from 'react';
 import Cart from './Cart';
 
-const items =    [
+const data =    [
   {
    id: 1,
    img:
@@ -29,11 +29,11 @@ const items =    [
 function App() {
   return (
     <>
-    <div className="container text-center bg-light justify-content-center border border-silver mt-2 p-2">
-      <h1> React State, Hooks, Etc. </h1>
-<Cart allData={items} />
+      <div className="container text-center bg-light justify-content-center border border-silver mt-2 p-2">
 
-      </div>
+      <h1> React State, Hooks, Etc. </h1>
+<Cart allData={data} />
+</div>
     </>
   );
 }
