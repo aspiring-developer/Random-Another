@@ -6,7 +6,7 @@ const data =    [
    title: 'I Love You to the Moon and Back',
    author: 'Amelia Hepworth',
    price: 10,
-   quantity: 10
+   quantity: 1
   },
   {
    id: 2,
@@ -15,7 +15,7 @@ const data =    [
    title: 'Our Class is a Family',
    author: 'Shannon Olsen',
    price: 20,
-   quantity: 20
+   quantity: 2
   },
   {
    id: 3,
@@ -24,7 +24,7 @@ const data =    [
    title: 'The Vanishing Half: A Novel',
    author: 'Brit Bennett',
    price: 30,
-   quantity: 30
+   quantity: 3
   },
 ]
 

@@ -1,12 +1,12 @@
 import React from 'react';
 
 function Cart({ allData }) {
+let grandTotal = allData.reduce((subTotal, eachItem) => {
+let grandTotalCalculation = subTotal + eachItem.quantity * eachItem.price;
+return grandTotalCalculation; }, 0)
 
-  let grandTotal = allData.reduce((total, singleData) => {
-    total + singleData.quantity * singleData.price;
-  })
   return (
-<>
+<p>
       <p>This is from "Cart" component</p>
       {allData.map(singleData => {
         let total = singleData.quantity * singleData.price;
@@ -21,7 +21,8 @@ Price: {singleData.price} <br />
           </div>
         )
       })}
-</>
+      <h5> Grand Total: {grandTotal} </h5>
+</p>
   )
 }
 
