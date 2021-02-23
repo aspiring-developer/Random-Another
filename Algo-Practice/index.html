@@ -9,19 +9,21 @@
 </head>
 
 <body>
-<h1 id="resultH1"> The result:  </h1>
+  <h1 id="resultH1"> The result: </h1>
   <script>
     let myStr = "Shiva Sharma";
     let reversedStr = '';
 
     function myFunc() {
-      for (i = myStr.length - 1; i >= 0; i--) {
+      for (i = myStr.length -1; i >= 0; i--) {
         reversedStr += myStr[i];
       }
       console.log(reversedStr);
     }
     myFunc();
-document.getElementById("resultH1").innerHTML = reversedStr;
+    document.getElementById("resultH1").innerHTML = ` Reversed String Result: <span style="color: red"> ${reversedStr} </span> <br />
+    Original String:  <span style="color: green"> ${myStr} </span> `;
   </script>
 </body>
+
 </html>
