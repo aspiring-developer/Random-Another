@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1 id="resultH1"> The result: </h1>
+  <div id="resultH1"> The result: </div>
   <script>
     let myStr = "Shiva Sharma";
     let reversedStr = '';
@@ -21,9 +21,10 @@
       console.log(reversedStr);
     }
     myFunc();
-    document.getElementById("resultH1").innerHTML = ` Reversed String Result: <span style="color: red"> ${reversedStr} </span> <br />
-    Original String:  <span style="color: green"> ${myStr} </span> `;
+    document.getElementById("resultH1").innerHTML = ` <h3>Reversed String Result: <span style="color: red"> ${reversedStr} </span> <br />
+    Original String:  <span style="color: green"> ${myStr} </span> </h3>`;
   </script>
+
 </body>
 
 </html>

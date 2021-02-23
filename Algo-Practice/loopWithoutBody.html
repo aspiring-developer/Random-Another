@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="resultArea" style="font-size: 2rem"> </div>
+
+
+
+
+
+<!--TODO: ########################################### -->
+<!--Loop without body example 1: -->
+  <script>
+    let sum1 = 0;
+    for (let i = 0; i < 5; i++, sum1 += i);
+    console.log(sum1);  // 15
+  </script>
+
+
+
+
+
+<!--TODO: ########################################### -->
+<!--Loop without body example 2: -->
+  <script>
+     let sum2 = 0;
+    for (let i = 0; i <= 5; i++, sum2 += i);
+    console.log(sum2);  // 21
+  </script>
+
+
+
+
+
+
+<!--TODO: ########################################### -->
+<!--Single Loop example: -->
+  <script>
+    let iterations1 = 0;
+    top: for (let i = 0; i < 5; i++) {
+      iterations1++;
+    }
+    console.log(iterations1); // 5
+  </script>
+
+
+
+
+
+
+<!--TODO: ########################################### -->
+<!--Double loop example: -->
+  <script>
+    let iterations2 = 0;
+    top: for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        iterations2++;
+        if (i === 2 && j === 2) {
+          break top;
+        }
+      }
+    }
+    console.log(iterations2); // 13
+  </script>
+
+
+
+
+
+
+<!--TODO: ########################################### -->
+<!--Double loop another example: -->
+  <script>
+    let iterations3 = 0;
+    top: for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        iterations3++;
+      }
+    }
+    console.log(iterations3); // 25
+  </script>
+
+
+
+
+
+
+
+<!--TODO: ########################################### -->
+  <!-- Calling all in one place:-->
+  <script>
+    document.getElementById("resultArea").innerHTML = `
+    The Result of sum1 : =====> <span style="color: red"> ${sum1} </span> <br />
+    The Result of sum2 : =====> <span style="color: green"> ${sum2} </span> <br />
+    The Result of iterations1 : =====> <span style="color: blue"> ${iterations1} </span> <br />
+    The Result of iterations2 : =====> <span style="color: purple"> ${iterations2} </span> <br />
+    The Result of iterations3 : =====> <span style="color: orange"> ${iterations3} </span> <br />
+     `
+  </script>
+</body>
+
+</html>
