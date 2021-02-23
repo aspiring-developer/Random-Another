@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<h1 id="resultH1"> The result:  </h1>
+  <script>
+    let myStr = "Shiva Sharma";
+    let reversedStr = '';
+
+    function myFunc() {
+      for (i = myStr.length - 1; i >= 0; i--) {
+        reversedStr += myStr[i];
+      }
+      console.log(reversedStr);
+    }
+    myFunc();
+document.getElementById("resultH1").innerHTML = reversedStr;
+  </script>
+</body>
+</html>
