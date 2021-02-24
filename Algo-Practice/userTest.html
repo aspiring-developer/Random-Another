@@ -10,20 +10,6 @@
 
 <body>
   <!--<script>
-// Create an empty variable to hold user input
-    let userInput = '';
-// random number generate
-  //  Math.floor(Math.random() * 21);
-// ask user userInput
-    let userPrompt = prompt("Guess the number");
-    userPrompt.value = Math.floor(Math.random() * 21);
-userInput = userPrompt.value;
-
-
-  </script>-->
-
-
-  <script>
 
     let randomNumber = Math.floor(Math.random() * 21);
     console.log(randomNumber);
@@ -39,7 +25,22 @@ userInput = userPrompt.value;
       console.log("Try again");
     }
 
-  </script>
+  </script>-->
+
+<script>
+
+  let randomNumber = Math.floor(Math.random() * 21);
+  console.log(randomNumber);
+
+  let userGuess = parseInt(prompt("Guess the number."));
+
+  while(userGuess !== randomNumber) {
+    userGuess = parseInt(prompt("Your guess is wrong. Please try again!"));
+  }
+  if (userGuess === randomNumber) {
+    console.log(`Your guess is right! The number was ${randomNumber}.`);
+  }
+</script>
 
 </body>
 
