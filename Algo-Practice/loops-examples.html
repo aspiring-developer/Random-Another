@@ -5,34 +5,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Loops examples</title>
 </head>
 
 <body>
   <div id="resultArea" style="font-size: 2rem"> </div>
 
 
-
-
-
-<!--TODO: ########################################### -->
-<!--Loop without body example 1: -->
+  <!--TODO: ########################################### -->
+  <!--Loop without body example 1: -->
   <script>
     let sum1 = 0;
-    for (let i = 0; i < 5; i++, sum1 += i);
-    console.log(sum1);  // 15
+    for (let i = 0; i < 5; i++) {
+      sum1 += i
+    }
+    console.log(sum1);  // 10
   </script>
 
 
 
 
-
-<!--TODO: ########################################### -->
-<!--Loop without body example 2: -->
+  <!--TODO: ########################################### -->
+  <!--Loop without body example 2: -->
   <script>
-     let sum2 = 0;
-    for (let i = 0; i <= 5; i++, sum2 += i);
-    console.log(sum2);  // 21
+    let sum2 = 0;
+    for (let i = 0; i <= 5; i++) {
+    sum2 += i
+    console.log(sum2);  // 15
+    }
+// 0 + 0 = 0,
+// 0 + 1 = 1,
+// 1 + 2 = 3,
+// 3 + 3 = 6,
+// 6 + 4 = 10,
+// 10 + 5 = 15,
+//
   </script>
 
 
@@ -40,8 +47,8 @@
 
 
 
-<!--TODO: ########################################### -->
-<!--Single Loop example: -->
+  <!--TODO: ########################################### -->
+  <!--Single Loop example: -->
   <script>
     let iterations1 = 0;
     top: for (let i = 0; i < 5; i++) {
@@ -55,18 +62,20 @@
 
 
 
-<!--TODO: ########################################### -->
-<!--Double loop example: -->
+  <!--TODO: ########################################### -->
+  <!--Double loop example: -->
   <script>
     let iterations2 = 0;
-    top: for (let i = 0; i < 5; i++) {
+    // Loops starts here
+    for (let i = 0; i < 5; i++) {
       for (let j = 0; j < 5; j++) {
         iterations2++;
         if (i === 2 && j === 2) {
-          break top;
+          break;
         }
       }
-    }
+    } // loop ends here
+
     console.log(iterations2); // 13
   </script>
 
@@ -75,15 +84,23 @@
 
 
 
-<!--TODO: ########################################### -->
-<!--Double loop another example: -->
+  <!--TODO: ########################################### -->
+  <!--Double loop another example: -->
   <script>
     let iterations3 = 0;
-    top: for (let i = 0; i < 5; i++) {
+    // loop starts here
+    for (let i = 0; i < 5; i++) {
+
       for (let j = 0; j < 5; j++) {
         iterations3++;
       }
+// outer 0 = inner 0,1,2,3,4     iterations3 = 5
+// outer 1 = inner 0,1,2,3,4     iterations3 = 5
+// outer 2 = inner 0,1,2,3,4     iterations3 = 5
+// outer 3 = inner 0,1,2,3,4     iterations3 = 5
+// outer 4 = inner 0,1,2,3,4     iterations3 = 5
     }
+
     console.log(iterations3); // 25
   </script>
 
@@ -93,7 +110,7 @@
 
 
 
-<!--TODO: ########################################### -->
+  <!--TODO: ########################################### -->
   <!-- Calling all in one place:-->
   <script>
     document.getElementById("resultArea").innerHTML = `

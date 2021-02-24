@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Testing </title>
+</head>
+
+<body>
+  <!--<script>
+// Create an empty variable to hold user input
+    let userInput = '';
+// random number generate
+  //  Math.floor(Math.random() * 21);
+// ask user userInput
+    let userPrompt = prompt("Guess the number");
+    userPrompt.value = Math.floor(Math.random() * 21);
+userInput = userPrompt.value;
+
+
+  </script>-->
+
+
+  <script>
+
+    let randomNumber = Math.floor(Math.random() * 21);
+    console.log(randomNumber);
+    console.log(typeof(randomNumber));
+
+    // ask user userInput
+    let userGuess = parseInt(prompt("Guess the number"));
+    console.log(userGuess);
+    console.log(typeof(userGuess));
+    if (userGuess === randomNumber) {
+      console.log("Right!");
+    } else {
+      console.log("Try again");
+    }
+
+  </script>
+
+</body>
+
+</html>
