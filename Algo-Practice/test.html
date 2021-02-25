@@ -10,18 +10,20 @@
 
 <body>
   <script>
-    let nums = [{num1: 1, num2: 3, num3: 6}];
-    for (num of nums){
-    console.log(num);
-    }
+  let isStudent = true;
+  let isSmart = false;
+
+  if(isStudent && isSmart) {
+    console.log("You are a student");
+  } else if (isStudent && !isSmart) {
+    console.log("You are not smart student");
+
+  } else {
+    console.log ("You are neither student nor smart");
+  }
   </script>
 
-<script>
-  let numbers = {num1: 1, num2: 3, num3: 6};
-  for (key in numbers){
-  console.log(numbers[key]);
-  }
-</script>
+
 </body>
 
 </html>
