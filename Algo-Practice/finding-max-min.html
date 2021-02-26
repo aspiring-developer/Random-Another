@@ -9,6 +9,8 @@
 </head>
 
 <body>
+  <div id="maxResultArea"></div>
+  <div id="minResultArea"></div>
 
   <script>
 
@@ -19,12 +21,15 @@
           max = arr[i]
         }
       }
-      console.log(max)
+      console.log(max);
+
+document.getElementById("maxResultArea").innerHTML = ` <h3>The Max number in the array is: <span style="color: red"> ${max} </span> <br /> `
     }
 
 
-    const arr = [23, 1, 12, 5, 7, 3, 4, 99];
+    const arr = [23, 1, 12, 5, 7, 3, 4, 99, 101];
     maxFinder(arr);
+
     console.log("===================")
   </script>
 
@@ -37,20 +42,22 @@
         min = arr1[i]
       }
     }
-    console.log(min)
+    console.log(min);
+    document.getElementById("minResultArea").innerHTML = ` <h3>The Max number in the array is: <span style="color: brown"> ${min} </span> <br /> `
   }
 
 
-  const arr1 = [23, 1, 12, 5, 7, 3, 4, 99];
+  const arr1 = [23, 1, 12, 5, 7, 3, 4, 99, 101, -1];
   minFinder(arr1);
+
+  </script>
 </script>
+
+
+
 
 </body>
 
+
 </html>
 
-<!--
-  1. loop the Array
-  2. when it hits the target
-
- -->

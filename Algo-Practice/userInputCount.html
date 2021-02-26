@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> User Input Count </title>
+</head>
+
+<body>
+
+  <input type="text" id="firstInput" name="firstInput" placeholder="Type first number here..." />
+  <input type="text" id="secondInput" name="secondInput" placeholder="Type second number here..." />
+  <button id="addButton"> Add + </button>
+  <h1 id="resultField"> </h1>
+
+
+  <script>
+    let firstInputEl = document.getElementById("firstInput");
+    let secondInputEl = document.getElementById("secondInput");
+    let addButtonEl = document.getElementById("addButton");
+    let resultFieldEl = document.getElementById("resultField");
+    addButtonEl.addEventListener("click", addInputValues);
+
+
+    let userFirstInput = 0;
+    let userSecondInput = 0;
+    let sum = 0;
+
+    function addInputValues() {
+      userFirstInput = firstInputEl.value;
+      userSecondInput = secondInputEl.value;
+      sum = parseInt(userFirstInput) + parseInt(userSecondInput);
+
+
+      console.log(`The first input is ${userFirstInput} and the second input is ${userSecondInput}. The sum of both inputs is: ${sum}.`);
+
+      resultFieldEl.innerHTML = `The first input is ${userFirstInput} and the second input is ${userSecondInput}. The sum of both inputs is: ${sum}.`;
+    };
+
+  </script>
+
+</body>
+
+</html>
