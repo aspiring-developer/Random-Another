@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Index Finding </title>
+</head>
+
+<body>
+
+  <script>
+
+    function indexFinder(arr, target) {
+      for (let i = 0; i < arr.length; i++) {
+            if(target == arr[i]) {
+              console.log("???")
+              break;
+            }
+      }
+    }
+
+
+    const arr = [23, 1, 12, 5, 7, 3, 4, 99];
+    let target = 7
+    indexFinder(arr, target);
+  </script>
+
+</body>
+
+</html>
+
+<!--
+  1. loop the Array
+  2. when it hits the target
+
+ -->

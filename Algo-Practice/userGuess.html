@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> User Guess Number </title>
+</head>
+
+<body>
+
+<script>
+
+  let randomNumber = Math.floor(Math.random() * 21);
+  console.log(randomNumber);
+  let userAttempt = 1;
+
+  let userGuess = parseInt(prompt("Guess the number."));
+
+  while(userGuess !== randomNumber) {
+    userGuess = parseInt(prompt("Your guess is wrong. Please try again!"));
+    userAttempt++;
+  }
+console.log(`Right! The number of attempt was ${userAttempt}.`);
+
+</script>
+
+</body>
+
+</html>
