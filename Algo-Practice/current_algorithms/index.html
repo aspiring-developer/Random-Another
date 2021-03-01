@@ -9,7 +9,7 @@
   <title>Algorithms in JavaScript</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="reset.css">
- </head>
+</head>
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 <body>
@@ -26,43 +26,92 @@
     </header> <!-- header ends-->
 
     <!-- !########## MAIN SECTION -1 ########## -->
-    <section class="d-flex">
-      <div class="row m-3 mainSection1Row">
+    <section class="section1 border-muted border-bottom">
+      <div class="row d-flex justify-content-center mt-3 mx-3 mainSection1Row">
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
           <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
-          <h5 class="title1 text-white p-2 mb-3"> Max or Min number </h5>
-        <p class="p-1"> The max number in the given array is: <br /> <span id="maxNumberDisplayField"> RESULT HERE </span> </p>
-      </div>
-      </div>
-        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
-           <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
-          <h5 class="title2 text-white p-2 mb-3">Missing number </h5>
-          <p class="p-1"> The missing number in the given array is: <br /> <span id="maxNumberDisplayField"> RESULT HERE </span> </p>
+            <h5 class="title1 text-white p-2 mb-3"> Max or Min number </h5>
+            <p class="p-1"> Given numbers: <br /> <span id="givenForMaxMinNumberDisplayField" class="givenData"> GIVEN NUMBERS RESULT HERE </span> </p> .............................. <br />
+            <p class="p-1"> The max number: <br /> <span id="maxNumberDisplayField" class="resultData"> RESULT HERE </span> </p>
+            .............................. <br />
+            <p class="p-1"> The min number: <br /> <span id="minNumberDisplayField" class="givenData"> RESULT HERE </span> </p>
           </div>
         </div>
         <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
-           <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
-             <h5 class="title3 text-white p-2 mb-3">User guessed number </h5>
-             <p class="p-1"> == See message Below == <br /> <span id="maxNumberDisplayField"> MESSAGE HERE </span> </p>
-            </div>
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+            <h5 class="title2 text-white p-2 mb-3">Missing number </h5>
+            <p class="p-1"> Given numbers: <br /> <span id="givenForMissingNumberDisplayField" class="givenData"> GIVEN NUMBERS RESULT HERE </span> </p> .............................. <br />
+            <p class="p-1"> The missing number in the given array is: <br /> <span id="missingNumberDisplayField" class="resultData"> RESULT HERE </span> </p>
           </div>
+        </div>
         <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
-         <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
-          <h5 class="title4 text-white p-2 mb-3">String Reversal </h5>
-          <p class="p-1"> Given string: <br /> <span id="maxNumberDisplayField"> GIVEN STRING RESULT HERE </span> </p>  .............................. <br />
-          <p class="p-1"> Reversed string: <br /> <span id="maxNumberDisplayField"> REVERED STRING RESULT HERE </span> </p>
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+            <h5 class="title3 text-white p-2 mb-3">User guessed number </h5>
+            <p class="p-1"> Random number (correct answer): <br /> <span id="givenForMissingNumberDisplayField" class="givenData"> CORRECT RANDOM NUMBER RESULT HERE </span> </p> .............................. <br />
+            <p class="p-1"> You Entered: <br /> <span id="userGuessDisplayField"> USER ENTERED NUMBER HERE </span> </p> .............................. <br />
+            <p class="p-1"> See message below: <br /> <span id="resultMessageDisplayField" class="givenData"> CORRECT RANDOM NUMBER RESULT HERE </span> </p>
+            <!--<p class="p-1"> Your Message: <br /> <span id="userGuessDisplayField">  </span> </p>-->
+          </div>
         </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="fix-width box4 col-sm-12 col-md-4 col-lg-3 text-center pl-0 mb-3">
+          <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+            <h5 class="title4 text-white p-2 mb-3">String Reversal </h5>
+            <p class="p-1"> Given string: <br /> <span id="givenStringDisplayField"> GIVEN STRING RESULT HERE </span> </p> .............................. <br />
+            <p class="p-1"> Reversed string: <br /> <span id="reversedStringDisplayField"> REVERSED STRING RESULT HERE </span> </p>
+          </div>
         </div>
         <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
       </div> <!-- .mainSection1Row ends -->
     </section> <!-- Main section -1 ends -->
+
+    <!-- !########## MAIN SECTION -2 ########## -->
+    <section class="Section2 border-muted border-bottom">
+      <div class="row d-flex justify-content-center mt-3 mx-3 mainSection2Row">
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection2Col border border-muted rounded p-0 pb-2">
+            <h5 class="title5 text-white p-2 mb-3"> Title Here </h5>
+            <!--<p class="p-1"> Given data: <br /> <span id="??????DisplayField"> GIVEN data RESULT HERE </span> </p>  .............................. <br />
+        <p class="p-1"> The Result: <br /> <span id="??????DisplayField"> RESULT HERE </span> </p>
+        .............................. <br />
+        <p class="p-1"> The Result: <br /> <span id="??????DisplayField"> RESULT HERE </span> </p>-->
+          </div>
+        </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection2Col border border-muted rounded p-0 pb-2">
+            <h5 class="title6 text-white p-2 mb-3">Title Here </h5>
+            <!--<p class="p-1"> The missing number in the given array is: <br /> <span id="??????DisplayField"> RESULT HERE </span> </p>-->
+          </div>
+        </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="fix-width col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection2Col border border-muted rounded p-0 pb-2">
+            <h5 class="title7 text-white p-2 mb-3">Title Here </h5>
+            <!--<p class="p-1"> == See message Below == <br /> <span id="??????DisplayField"> MESSAGE HERE </span> </p>-->
+          </div>
+        </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="fix-width box4 col-sm-12 col-md-4 col-lg-3 text-center pl-0 mb-3">
+          <div class="col mainSection2Col border border-muted rounded p-0 pb-2">
+            <h5 class="title8 text-white p-2 mb-3">Title Here </h5>
+            <!--<p class="p-1"> Given string: <br /> <span id="??????DisplayField"> GIVEN STRING RESULT HERE </span> </p>  .............................. <br />
+          <p class="p-1"> Reversed string: <br /> <span id="??????DisplayField"> REVERSED STRING RESULT HERE </span> </p>-->
+          </div>
+        </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+      </div> <!-- .mainSection2Row ends -->
+    </section> <!-- Main section -2 ends -->
 
     <!-- !########## FOOTER SECTION ########## -->
     <footer>
@@ -73,6 +122,55 @@
       <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
     </footer> <!-- footer ends-->
   </div> <!-- .mainWrapper ends -->
+
+  <!--Custom styles-->
+  <style>
+    .mainSection1Row,
+    .mainSection2Row {
+      margin: 0 auto;
+    }
+
+    .mainSection1Col,
+    .mainSection2Col {
+      background-color: aliceblue;
+      min-height: 330px;
+    }
+
+    .title1,
+    .title8 {
+      background-color: #9624B9;
+    }
+
+    .title2,
+    .title7 {
+      background-color: #781D94;
+    }
+
+    .title3,
+    .title6 {
+      background-color: #8C21AD;
+    }
+
+    .title4,
+    .title5 {
+      background-color: #5D1773;
+    }
+
+    .fix-width {
+      min-width: 300px;
+    }
+
+    .box4 {
+      padding-right: 0 !important;
+    }
+    .givenData, .resultData {
+      display: inline-block;
+      font-family: 'Courier New', Courier, monospace;
+      color: red;
+      font-weight: bold;
+      padding-top: .5rem;
+    }
+  </style>
 
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- Required Bootstrap JavaScript -->
@@ -85,26 +183,12 @@
     document.querySelector(".currentYearDisplayField").innerHTML = ` &copy; ${currentYear} &bull; `;
   </script>
 
+<!--External JavaScript Fils' Links-->
+<script src="./max_n_min_number_finder.js"></script>
+<script src="./missing_number_finder,js"></script>
+<script src="./user_guessed_number.js"></script>
+<script src="./string_reversal.js"></script>
 
-<!--Custom styles-->
-<style>
-.mainSection1Col {
-  background-color: aliceblue;
-  min-height: 300px;
-}
-.title1 {
-  background-color:#9624B9;
-}
-.title2 {
-  background-color:#781D94;
-}
-.title3 {
-  background-color:#8C21AD;
-}
-.title4 {
-  background-color:#5D1773;
-}
-  </style>
 </body>
 
 </html>
