@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding Odd and Even Numbers</title>
+</head>
+
+<body>
+  <h1> Finding Odd and Even Numbers </h1>
+
+  <!--Finding odd numbers from an array of even and odd numbers -->
+  <script>
+    let givenArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    function oddNumbers1(givenAllNumbers) {
+      let foundOddNumbers = [];
+      for (i = 0; i < givenAllNumbers.length; i++) {
+        if (givenAllNumbers[i] % 2 != 0) {
+          foundOddNumbers.push(givenAllNumbers[i]);
+        }
+      }
+      return foundOddNumbers;
+    }
+    let oddResult = oddNumbers1(givenArray);
+    console.log(oddResult);
+  </script>
+
+  <!--Finding odd numbers from zero to given number -->
+  <script>
+    function oddNumbers2(givenNumbers) {
+      let foundOddNumbers2 = [];
+      for (let i = 0; i <= givenNumbers; i++) {
+        if (i % 2 != 0) {
+          foundOddNumbers2.push(i);
+        }
+      }
+      return foundOddNumbers2; // odd num = 1, 3, 5
+    }
+    let oddResult2 = oddNumbers2(5);
+    console.log(oddResult2);
+  </script>
+
+</body>
+
+</html>

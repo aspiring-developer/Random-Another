@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding a Missing Number</title>
+</head>
+
+<body>
+  <h1> Finding a Missing Number </h1>
+
+  <!--Finding a missing number in a given array -->
+  <script>
+    // Given numbers
+    let givenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+    let sumOfGivenNumbers = 0;
+    let maxNum = 0;
+    let sumOfNaturalNumbers = 0;
+
+    // Finding the sum of array numbers
+    function sumOfArrayNumbers() {
+      for (i = 0; i < givenNumbers.length; i++) {
+        sumOfGivenNumbers += givenNumbers[i];
+      }
+      console.log(sumOfGivenNumbers); // 46
+    }
+    sumOfArrayNumbers();
+
+    // Finding the max number in the given array
+    function maxNumberOfArray() {
+      for (i = 0; i < givenNumbers.length; i++) {
+        if (maxNum < givenNumbers[i]) {
+          maxNum = givenNumbers[i]
+        }
+      }
+      console.log(maxNum); // 10
+      return maxNum;
+    }
+    let foundMaxNum = maxNumberOfArray();
+
+    // Finding the sum of natural numbers in the given array
+    function sumOfAllNumbers() {
+      //FORMULA: sumOfNaturalNumbers = n(n+1) / 2;
+      sumOfNaturalNumbers = foundMaxNum * (foundMaxNum + 1) / 2;
+      console.log(sumOfNaturalNumbers); // 55
+      return sumOfNaturalNumbers;
+    }
+    sumOfAllNumbers();
+
+    let missingNumber = sumOfNaturalNumbers - sumOfGivenNumbers;
+    console.log("The Missing Number is: " + missingNumber);
+
+  </script>
+</body>
+
+</html>

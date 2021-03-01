@@ -24,6 +24,9 @@
     addButtonEl.addEventListener("click", addInputValues);
 
 
+
+
+
     let userFirstInput = 0;
     let userSecondInput = 0;
     let sum = 0;
@@ -33,10 +36,10 @@
       userSecondInput = secondInputEl.value;
       sum = parseInt(userFirstInput) + parseInt(userSecondInput);
 
+      for (let i = 0; i < sum; i++) {
+        console.log(`The first input is ${userFirstInput} and the second input is ${userSecondInput}. The sum of both inputs is: ${sum}.`);
+      }
 
-      console.log(`The first input is ${userFirstInput} and the second input is ${userSecondInput}. The sum of both inputs is: ${sum}.`);
-
-      resultFieldEl.innerHTML = `The first input is ${userFirstInput} and the second input is ${userSecondInput}. The sum of both inputs is: ${sum}.`;
     };
 
   </script>

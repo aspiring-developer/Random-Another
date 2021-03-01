@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // Given Array
+ let China = [12, 4, 78, 89, 32, 12, 71, 34];
+ let Nepal = [12, 4, 78, 89, 32, -32, 2, 34];
+ let India = [12, 4, 78, 89, 1, 12, 71, 34];
+
+    // Find min value by creating a function
+    function findMin(arr) {
+     let min = 1000000;
+      // Loop through the array elements
+      for (let i = 0; i < arr.length; i++) {
+        // comparing with conditional statement
+        if (min > arr[i]) {
+          min = arr[i];
+        }
+      }
+    return min;
+    // console.log(min);
+    }
+
+    let nepalMinimum = findMin(Nepal);
+    let chinaMinimum = findMin(China);
+    let indiaMinimum = findMin(India);
+    let allMin = [];
+    allMin.push(nepalMinimum);
+    allMin.push(chinaMinimum);
+    allMin.push(indiaMinimum);
+
+
+    //console.log(findMinimum);
+    console.log(findMin(allMin));
+
+
+  </script>
+
+</body>
+
+</html>
