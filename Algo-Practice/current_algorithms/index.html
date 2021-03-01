@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Main Page for Result Display</title>
+  <title>Algorithms in JavaScript</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="reset.css">
-</head>
+ </head>
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 <body>
@@ -19,49 +19,92 @@
     <header>
       <div class="row text-center bg-dark text-white py-4 px-3 mainSection1Row">
         <div class="col">
-          <h1 class="text-center text-white text-uppercase font-weight-bold mt-5"> Programming Algorithm in JavaScript <br> </h1>
-          <p class="text-center text-white my-3"> <em> --- Some simple algorithms that are helpful to boost coding skills --- </em> </p>
+          <h1 class="text-center text-white text-uppercase font-weight-bold mt-5"> Programming Algorithms in JavaScript <br> </h1>
+          <p class="text-center text-white my-3"> <em> --- Some simple algorithms that are helpful in boosting coding skill --- </em> </p>
         </div>
       </div>
     </header> <!-- header ends-->
 
     <!-- !########## MAIN SECTION -1 ########## -->
-    <section>
-      <div class="row my-4 mainSection2Row">
+    <section class="d-flex">
+      <div class="row m-3 mainSection1Row">
         <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="col p-5 bg-light text-center">
-          <h4 class="text-dark p-3" id="greetingTexts"> This is h4 text field. What do you want here? </h4>
-          <!-- input group -->
-          <div class="input-group mx-auto">
-            <input type="text" class="form-control text-center">
-          </div> <!-- input group ends -->
-          <p class="text-secondary pb-3 py-2"> This is a paragraph field. </p>
-          <a href="#"><button type="button" class="btn btn-warning " id="frontLgBtn"> I am a button :) </button> </a>
+        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+          <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+          <h5 class="title1 text-white p-2 mb-3"> Max or Min number </h5>
+        <p class="p-1"> The max number in the given array is: <br /> <span id="maxNumberDisplayField"> RESULT HERE </span> </p>
+      </div>
+      </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+           <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+          <h5 class="title2 text-white p-2 mb-3">Missing number </h5>
+          <p class="p-1"> The missing number in the given array is: <br /> <span id="maxNumberDisplayField"> RESULT HERE </span> </p>
+          </div>
         </div>
         <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-      </div> <!-- .mainSection2Row ends -->
-    </section> <!-- Main section -2 ends -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+           <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+             <h5 class="title3 text-white p-2 mb-3">User guessed number </h5>
+             <p class="p-1"> == See message Below == <br /> <span id="maxNumberDisplayField"> MESSAGE HERE </span> </p>
+            </div>
+          </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        <div class="col-sm-12 col-md-4 col-lg-3 text-center pr-3 pl-0 mb-3">
+         <div class="col mainSection1Col border border-muted rounded p-0 pb-2">
+          <h5 class="title4 text-white p-2 mb-3">String Reversal </h5>
+          <p class="p-1"> Given string: <br /> <span id="maxNumberDisplayField"> GIVEN STRING RESULT HERE </span> </p>  .............................. <br />
+          <p class="p-1"> Reversed string: <br /> <span id="maxNumberDisplayField"> REVERED STRING RESULT HERE </span> </p>
+        </div>
+        </div>
+        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+      </div> <!-- .mainSection1Row ends -->
+    </section> <!-- Main section -1 ends -->
 
     <!-- !########## FOOTER SECTION ########## -->
     <footer>
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
       <div class="text-center bg-dark text-white py-4 px-3">
-        <p> <small class="currentYearDisplayField"> </small> Note: Create external JavaScript file for each coding challenge and link the file in this index.html. </p>
-         </div>
+        <p> <small class="currentYearDisplayField"> </small> Note: Create external JavaScript file for each coding challenge and link the file to the index.html. </p>
+      </div>
       <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
     </footer> <!-- footer ends-->
   </div> <!-- .mainWrapper ends -->
 
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- Required Bootstrap JavaScript -->
-  <!-- Check the latest version of CDNs @ https://getbootstrap.com/ As of 06/15/2020, jQuery: 3.5.1, popper.js: 1.16.0, bootstrap.js: 4.5.0   -->
+  <!-- Check the latest version of CDNs @ https://getbootstrap.com/ Here, it is as of 03/01/2021 -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Current year printing custom script -->
-<script> let currentYear = new Date().getFullYear();
-document.querySelector(".currentYearDisplayField").innerHTML = ` &copy; ${currentYear} &bull;`;
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Current year printing custom script -->
+  <script> let currentYear = new Date().getFullYear();
+    document.querySelector(".currentYearDisplayField").innerHTML = ` &copy; ${currentYear} &bull; `;
+  </script>
+
+
+<!--Custom styles-->
+<style>
+.mainSection1Col {
+  background-color: aliceblue;
+  min-height: 300px;
+}
+.title1 {
+  background-color:#9624B9;
+}
+.title2 {
+  background-color:#781D94;
+}
+.title3 {
+  background-color:#8C21AD;
+}
+.title4 {
+  background-color:#5D1773;
+}
+  </style>
 </body>
 
 </html>
