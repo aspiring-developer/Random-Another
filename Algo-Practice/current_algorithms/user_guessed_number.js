@@ -5,7 +5,7 @@ let resultMessageDisplayFieldEl = document.querySelector("#resultMessageDisplayF
 
 // Add click-event listener to the button
 userGuessButtonEl.addEventListener("click", function () {
-  askReceiveUserPrompt();
+  //askReceiveUserPrompt();
 });
 
 // Process a randomized number as correct answer (1 to 10)
@@ -23,6 +23,7 @@ while(userPrompt != randomizedNumber) {
   resultMessageDisplayFieldEl.innerHTML = ` Congratulations! <br /> The answer is right! `;
   return;
 }
+//askReceiveUserPrompt();
 
 // Send the result to the UI for display
 givenRandomNumberDisplayFieldEl.innerText = randomizedNumber;
@@ -33,3 +34,4 @@ let filePathArea3El = document.querySelector(".filePathArea3")
 let fileName3 = "./user_guessed_number.js";
 filePathArea3El.innerHTML = ` CODE FILE: ${fileName3} `;
 //! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+

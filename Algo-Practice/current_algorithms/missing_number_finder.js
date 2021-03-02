@@ -4,19 +4,19 @@ const sumOfGivenNumberDisplayFieldEl = document.getElementById("sumOfGivenNumber
 const sumOfNaturalNumberDisplayFieldEl = document.getElementById("sumOfNaturalNumberDisplayField");
 
 
-let givenNumbersForMissingNumber = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+let givenNumbersForMissingNumber = [1, 2, 3, 4, 5, 6, 8, 10, 9];
 //! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //! Find the max number
 function maxNumberFinderFunction() {
   // Declare a variable to hold the max number
-  let maxNumber;
+  let maxNumber = -1000000;
   // Find the max number
   for (i = 0; i < givenNumbersForMissingNumber.length; i++) {
-    if (givenNumbersForMissingNumber[i] > 0) {
+    if (givenNumbersForMissingNumber[i] > maxNumber) {
       maxNumber = givenNumbersForMissingNumber[i];
     }
   }
-  console.log(maxNumber); // 10
+  console.log("max num:" + maxNumber); // 10
   return maxNumber;
 }
 // Assign the function result in a reusable variable
@@ -36,7 +36,7 @@ function sumOfGivenNumbersFinderFunction() {
 let sumOfGivenNumbers = sumOfGivenNumbersFinderFunction();
 
 //! Find the sum of the natural numbers
-// FORMULA: Sum_Of_Natural_Numbers = n*(n+1)/2; // Here n is the highest number (10)
+// FORMULA: Sum_Of_Natural_Numbers = n * (n+1)/2; // Here n is the highest number (10)
 let sumOfNaturalNumbers = foundMaxNumber * (foundMaxNumber + 1) / 2;
 console.log(sumOfNaturalNumbers); // 55
 
