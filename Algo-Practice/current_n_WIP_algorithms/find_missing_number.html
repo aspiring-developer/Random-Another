@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Missing Number</title>
+</head>
+<body>
+  <!-- ! Find Missing Number -->
+  <script>
+let givenForMissingNumber = [1, 3, 2, 4, 10, 6, 7, 9, 8];
+// Assume we don't have given number array yet, so find the max number first
+let maxNumberFinder = (possibleNumbers) => {
+  let maxNumber = -1000000;
+for(i = 0; i < possibleNumbers.length; i++) {
+  if(maxNumber < possibleNumbers[i]) {
+    maxNumber = possibleNumbers[i]
+  }
+}
+console.log(maxNumber);
+return maxNumber;
+}
+let foundMaxNumber = maxNumberFinder(givenForMissingNumber);
+
+  </script>
+</body>
+</html>
