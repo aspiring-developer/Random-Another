@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Missing Number</title>
-</head>
-
-<body>
-  <!-- ! Find Missing Number -->
-  <script>
+    //! Find Missing Number
     let givenForMissingNumber = [1, 3, 2, 4, 10, 6, 7, 9, 8];
     // Assume we don't have given number array yet, so find the max number first
     let maxNumberFinder = (possibleNumbers) => {
@@ -52,8 +40,3 @@
     // Finally, find the missing number
     let missingNumber = foundSumOfNaturalNumbers - foundSumOfGivenNumbers;
     console.log("Found Missing Number ---> " + missingNumber);
-
-  </script>
-</body>
-
-</html>
