@@ -5,7 +5,7 @@ let resultMessageDisplayFieldEl = document.querySelector("#resultMessageDisplayF
 
 // Add click-event listener to the button
 userGuessButtonEl.addEventListener("click", function () {
-  //askReceiveUserPrompt();
+  askReceiveUserPrompt();
 });
 
 // Process a randomized number as correct answer (1 to 10)
