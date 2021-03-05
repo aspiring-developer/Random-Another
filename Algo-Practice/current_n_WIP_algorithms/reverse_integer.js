@@ -1,44 +1,19 @@
 //! Write a function that reverses an integer
 
-function reverseInteger(receivingInteger) {
-  console.log("Initial Receiving Integer: --> " + receivingInteger);
-  let reversedInteger = 0;
-  reversedInteger += receivingInteger%10;
-  console.log("1st Reversed Integer: --> " + reversedInteger);
-  receivingInteger = receivingInteger - (receivingInteger%10);
-  receivingInteger = receivingInteger / 10;
-  console.log("Remaining Receiving Integer After Step-1: --> " + receivingInteger);
+function reverseInteger(num) {
+  let reversedNum = 0;
 
-
-  let newReversedInteger = receivingInteger%10;
-  console.log("2nd Reversed Integer: --> " + newReversedInteger);
-
-
-  reversedInteger += newReversedInteger * 10;
-  console.log("2nd Reversed Integer: --> " + reversedInteger);
-
+  while (num != 0) {
+    let remainder = num % 10;
+    reversedNum = reversedNum * 10 + remainder;
+    console.log(num);
+    num = Math.floor(num / 10);
   }
-  let reversedResult = reverseInteger(682);
-  //console.log("Reversed Result: --> " + reversedResult);
+  console.log(num);
+  return reversedNum;
+}
 
-  // 983 --> 389
-
-  //
-  //num = 983
-  //reverse = 0;
-
-  //983%10 = 3
-  //983/10 = 98
+console.log(reverseInteger(8563));
 
 
-  //reverse +=3
 
-  //2nd step:
-
-  //98%10 = 8
-  //98/10 = 9
-
-
-  //reverse += (reverse*10)+8
-
-  //num < 10 => reverse*10+9
