@@ -90,12 +90,14 @@
             <h5 class="title5 text-white p-2 mb-3"> User's two inputs </h5>
             <!--<p class="p-1"> Given data: <br /> <span id="??????DisplayField" class="givenData"> GIVEN DATA </span> </p>  -->
             <form>
-            <input type="text" id="firstInput" name="firstInput" class="mt-4" placeholder="Enter first number" /> <br />
+            <input type="text" id="firstInput" name="firstInput" class="mt-2" placeholder="Enter first number" /> <br />
             <input type="text" id="secondInput" name="secondInput" class="mt-4" placeholder="Enter second number" /> <br />
             <button type="submit" class="btn btn-secondary mt-4 calculateButton">Calculate</button>
             </form>
-        <p class="p-1"> The Sum: <span id="userInputsSumDisplayField" class="resultData"> Sum </span> </p>
-        .............................. <br />
+        <p class="p-1"> The Sum: <span id="userInputsSumDisplayField" class="resultData"> Result Here</span> <br />
+          <small id="errorMessageDisplay" class="resultData">  </small>
+        </p>
+
         <hr />
         <small class="filePathArea5 text-muted">Path Display</small>
           </div>
@@ -205,7 +207,7 @@
   <!--External JavaScript Fils' Links-->
   <script src="./max_n_min_number_finder.js"></script>
   <script src="./missing_number_finder.js"></script>
-  <script src="./user_guessed_number.js"></script>
+  <!--<script src="./user_guessed_number.js"></script>-->
   <script src="./string_reversal.js"></script>
   <script src="./two_inputs.js"></script>
 

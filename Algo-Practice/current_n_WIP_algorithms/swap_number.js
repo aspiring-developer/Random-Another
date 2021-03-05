@@ -10,7 +10,7 @@ function swapNumbers(givenArray, index1, index2) {
 
 let arr = [8, 5, 7, 3, 2, 1]
 
-let finalSwapped = swapNumbers(arr, 1, 2);
-let finalSwapped2 = swapNumbers(arr, 5, 4);
+let finalSwapped = swapNumbers(arr, 0, 1);
+let finalSwapped2 = swapNumbers(arr, 1, 2);
 
 console.log(finalSwapped);
