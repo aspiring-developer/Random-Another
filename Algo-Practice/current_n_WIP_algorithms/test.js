@@ -12,10 +12,10 @@ receivingInteger = receivingInteger / 10;
 //console.log("Remaining Receiving Integer After Step-1: --> " + receivingInteger);
 
 let newReversedInteger = receivingInteger % 10;
-newReversedInteger.toString();
+newReversedInteger = newReversedInteger.toString();
 //console.log("2nd Reversed Integer: --> " + newReversedInteger);
 
-reversedInteger += newReversedInteger.toString();
+reversedInteger += newReversedInteger;
 //console.log("Reversed Integer After Step-2: --> " + reversedInteger);
 
 let newReversedInteger2 = receivingInteger - (receivingInteger % 10) ;
@@ -27,7 +27,7 @@ console.log("Result: --> " + reversedInteger);
 return reversedInteger;
 
 }
-//reverseInteger(682);
+reverseInteger(682);
 //let reversedResult = reverseInteger(682);
 //console.log("Reversed Result: --> " + reversedResult);
 
