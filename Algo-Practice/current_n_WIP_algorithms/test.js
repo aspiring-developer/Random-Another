@@ -1,31 +1,12 @@
-//TODO: Create a function to find sum of an integer's beginning to ending values
+//TODO: Check if a substring is inside a string
+function findSubStr(str, subStr) {
+  let foundSubStr = '';
 
-function recursiveSum(num) {
-  if (num > 0) {
-    return num + recursiveSum(num - 1);
-  } else {
-    return 0;
+  for (i = 0; i < str.length; i++) {
   }
 }
-console.log("Result: --> " + recursiveSum(5));
 
 
-// num = 1,2,3,4,5,6,7,8,9,10
-
-/*
-num = 10
-num = 1,2,3,4,5,6,7,8,9,10
-num = 1+2+3+4+5+6+7+8+9+10
-num = 55
-*/
-
-//    /* */ Comment
-//TODO: To Do
-//<
-//>
-//* Asterisk
-//? Question Mark
-//! Exclamation
-//# THE TAGLINE ENDS HERE ##############
-
+// let result = findSubStr("hello", "llo");
+// console.log(result + " <-- Result ");
 
