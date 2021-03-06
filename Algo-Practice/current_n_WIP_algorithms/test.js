@@ -7,25 +7,25 @@ function recursiveSum(num) {
     return 0;
   }
 }
-// console.log("Result: --> " + recursiveSum(5));
+console.log("Result: --> " + recursiveSum(5));
 
 
-//* num = 10
+// num = 1,2,3,4,5,6,7,8,9,10
+
+/*
+num = 10
 num = 1,2,3,4,5,6,7,8,9,10
-* num = 1+2+3+4+5+6+7+8+9+10
-* num = 55
+num = 1+2+3+4+5+6+7+8+9+10
+num = 55
 */
-//^^^^^^^^^
-//vvvvvvvvvvvvvvvv
 
-//
-/* */
+//    /* */ Comment
 //TODO: To Do
+//<
+//>
 //* Asterisk
 //? Question Mark
-// Comment
 //! Exclamation
-//<
 //# THE TAGLINE ENDS HERE ##############
-//>
+
 
