@@ -11,7 +11,7 @@ function lonelyIntFinder(arr) {
   let repeatedInt = [];
   let lonelyInt;
   for (let i = 0; i < sortedArr.length; i++) {
-    //console.log("Array Element:" + sortedArr[i] + " | Index:  --> " + i);
+   console.log("Array Element:" + sortedArr[i] + " | Index:  --> " + i);
 if(sortedArr[i + 1] === sortedArr[i]) {
   repeatedInt.push(sortedArr[i]);
 } else {
@@ -23,7 +23,7 @@ if(sortedArr[i + 1] === sortedArr[i]) {
 //console.log("After push: " + repeatedInt);
   return lonelyInt;
 }
-let givenArray = [1, 2, 2];
+let givenArray = [3, 1, 2, 2,3,4,1];
 //let givenArray = ["1", "2", "3", "4", "3", "2", "1"];
 
 let finalResult = lonelyIntFinder(givenArray);
