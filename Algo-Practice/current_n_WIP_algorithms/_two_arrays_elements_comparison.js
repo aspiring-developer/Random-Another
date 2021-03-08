@@ -1,26 +1,28 @@
 //TODO: Compare two arrays and find unique values (element that only exists in one array):
 
-const arrayOne = [1, 4, 5, 7, 3, 8, 1, 9];
+const arrayOne = [2, 1, 4, 5, 7, 3, 8, 1, 9, 10, 12, 13, 15];
 const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
 
-function compareArrays(firstArr, secondArr) {
-notMatched = [];
-matched = [];
-for(i = 0; i < arrayOne.length; i++) {
-if(firstArr[i] === secondArr[i]) {
-  matched.push(secondArr[i]);
-  console.log(matched);
-  return matched;
-} else {
-  notMatched.push(firstArr[i])
-  return notMatched;
+function compareFirstToSecond(firstArr, secondArr) {
+  result1 = [];
 
+  for (i = 0; i < firstArr.length; i++) {
+    if (secondArr.indexOf(firstArr[i]) === -1) {
+      result1.push(firstArr[i]);
+    }
+  }
+  return result1;
 }
-//console.log(notMatched);
-}
+console.log("Final: --> " + compareFirstToSecond(arrayOne, arrayTwo));
 
+function compareSecondToFirst(firstArr, secondArr) {
+  result2 = [];
+
+  for (i = 0; i < secondArr.length; i++) {
+    if (firstArr.indexOf(secondArr[i]) === -1) {
+      result2.push(secondArr[i]);
+    }
+  }
+  return result2;
 }
-console.log("Final: --> " + compareArrays(arrayOne, arrayTwo));
-// arrayOne[i] === arrayOne[i]
-//1 -> 3, 7, 1, 12, 9, 5, 24, 16
-//4 -> 3, 7, 1, 12, 9, 5, 24, 16
+console.log("Final: --> " + compareSecondToFirst(arrayOne, arrayTwo));

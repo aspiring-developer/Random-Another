@@ -16,17 +16,12 @@
 function findSubStr1(str1, subStr1) {
   var result;
   for (i = 0; i < str1.length; i++) {
-    var oneChar = str1[i]; //a
+    var oneChar = str1[i];
     if (subStr1.startsWith(oneChar)) {
-
-      //a
-      //
       let s1 = str1.substring(i, i + subStr1.length);
-
       if (subStr1.localeCompare(s1) == 0) {
-
         return true;
-      }else{
+      } else {
         result = false;
       }
     }
@@ -50,5 +45,5 @@ function compareStrings(str3, str4) {
 let a = "abcdf";
 let b = "cde";
 
-let c = a.substring(2, 2+b.length);
+let c = a.substring(2, 2 + b.length);
 console.log(c);
