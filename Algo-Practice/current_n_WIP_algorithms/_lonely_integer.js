@@ -8,22 +8,24 @@ function lonelyIntFinder(arr) {
   let lonelyInt;
   console.log(arr + " <-- Before slice and sort");
   let sortedArr = arr.sort();
-  console.log(arr + " <-- After slice and sort");
+  console.log(sortedArr);
+  let i = 0;
 
-  for (let a = 0; a < arr.length; a++) {
-    const element = arr[a];
-    for (let b = a + 1; b < arr.length; b++) {
-      if(element == arr[b]){
-      continue;
-      }
 
+  while (i < sortedArr.length) {
+    if (sortedArr[i] != sortedArr[i + 1]) {
+      return sortedArr[i];
     }
-    return element;
-
+    i = i + 2;
   }
 
+  return -1;
+
 }
-let givenArray = [1, 1, , 3, 3, 5,5, 9];
+
+
+let givenArray = [4, 6, 3, 4, 3, 3, 16, 9, 7, 9, 12, 7, 13, 111, 211];
+//1,1,3,,3, 7
 //let givenArray = ["1", "2", "3", "4", "3", "2", "1"];
 
 let finalResult = lonelyIntFinder(givenArray);

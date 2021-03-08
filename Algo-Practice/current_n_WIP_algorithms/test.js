@@ -5,38 +5,53 @@
 //The unique element is 4.
 
 function lonelyIntFinder(arr) {
-  console.log(arr + " <-- Before slice and sort");
+  console.log(arr + " <-- Before sort");
   let sortedArr = arr.sort();
-  console.log(arr + " <-- After slice and sort");
+  console.log(arr + " <-- After sort");
   let repeatedInt = [];
-  let lonelyInt;
+  let lonelyInt = [];
+
   for (let i = 0; i < sortedArr.length; i++) {
-   console.log("Array Element:" + sortedArr[i] + " | Index:  --> " + i);
-if(sortedArr[i + 1] === sortedArr[i]) {
-  repeatedInt.push(sortedArr[i]);
-} else {
-  lonelyInt = sortedArr[i];
-  //console.log("Lonely Integer: " + sortedArr[i]);
-  //console.log("Lonely Integer: " + lonelyInt);
-}
-}
-//console.log("After push: " + repeatedInt);
-  return lonelyInt;
-}
-let givenArray = [3, 1, 2, 2,3,4,1];
-//let givenArray = ["1", "2", "3", "4", "3", "2", "1"];
+  console.log("Array Element:" + sortedArr[i] + " | Index:  --> " + i);
+    let currentNum = sortedArr[i];
+    console.log("Current Num: " + currentNum);
+    let nextNum = currentNum + 1;
+    console.log("Next Num: " + nextNum);
+
+
+    if (currentNum  === nextNum) {
+      repeatedInt.push(sortedArr[i]);
+      console.log("Repeated Integer: " + repeatedInt);
+    //console.log("Next Num in if: " + nextNum);
+    lonelyInt = currentNum;
+    console.log("Lonely Int in if: " + lonelyInt);
+    //return lonelyInt;
+
+    }
+    return lonelyInt;
+    }
+ }
+let givenArray = [2, 3, 4, 3, 2,4,5];
+//let givenArray = [2, 1, 2];
 
 let finalResult = lonelyIntFinder(givenArray);
 console.log("Final Result:" + finalResult);
 
 
 
+
+
+
+
+
+
+
+
+
+
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //const findDuplicates = (arr) => {
-//  let sorted_arr = arr.slice().sort(); // You can define the comparing function here.
-//  // JS by default uses a crappy string compare.
-//  // (we use slice to clone the array so the
-//  // original array won't be modified)
+//  let sorted_arr = arr.slice().sort();
 //  let results = [];
 //  for (let i = 0; i < sorted_arr.length - 1; i++) {
 //    if (sorted_arr[i + 1] == sorted_arr[i]) {
@@ -66,3 +81,6 @@ console.log("Final Result:" + finalResult);
 //  return out;
 //}
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
