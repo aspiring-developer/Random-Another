@@ -30,6 +30,7 @@ function findSubStr1(str1, subStr1) {
 }
 //console.log("Find Substr: " + findSubStr1("ffcde", "fcde"))
 //console.log("Comparison is: "+"abcd".localeCompare("abcd"));
+
 // Comparing two strings
 function compareStrings(str3, str4) {
   var result = true;
@@ -41,9 +42,8 @@ function compareStrings(str3, str4) {
   return result;
 }
 
-
+// Example
 let a = "abcdf";
 let b = "cde";
-
 let c = a.substring(2, 2 + b.length);
 console.log(c);

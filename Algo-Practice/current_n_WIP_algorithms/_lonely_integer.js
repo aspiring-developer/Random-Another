@@ -1,8 +1,8 @@
 //TODO: Given an array of integers, where all elements but one occur twice, find the unique element.
 
 //For example:
-//Given Array: givenArray = [1,2,3,4,3,2,1]
-//The unique element is 4.
+//Given Array: givenArray = [4, 7, 4, 3, 3, 16, 9, 7, 9]
+//The unique element is 16.
 
 function lonelyIntFinder(arr) {
   let lonelyInt;
@@ -25,5 +25,6 @@ let givenArray = [4, 7, 4, 3, 3, 16, 9, 7, 9];
 
 let finalResult = lonelyIntFinder(givenArray);
 console.log("Final Result:" + finalResult);
+
 
 
