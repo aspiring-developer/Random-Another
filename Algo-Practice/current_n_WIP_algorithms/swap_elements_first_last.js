@@ -1,4 +1,6 @@
 //TODO 03/09/2021: Write a function that reverses an array's elements.
+
+//* Solving one way
 function reverseArray(arr) {
   let resultedArray = [];
   for (i = arr.length - 1; i >= 0; i--) {
@@ -6,9 +8,10 @@ function reverseArray(arr) {
   }
   return resultedArray;
 }
+const givenArray = [4, 8, 45, 22, 13];
+console.log(revArr(givenArray));
 
-
-
+//* Solving another way
 const aa = [3, 7, 44, 21, 12];
 function revArr(arr) {
   for (let i = 0; i < arr.length / 2; i++) {
@@ -18,7 +21,6 @@ function revArr(arr) {
     arr[arr.length - 1 - i] = temp;
   }
   return arr;
-
 }
 
 console.log(revArr(aa));
@@ -28,3 +30,4 @@ console.log(revArr(aa));
 //2-> 12, 21, 44, 7, 3
 //3-> No need to loop
 //4-> No need to loop
+

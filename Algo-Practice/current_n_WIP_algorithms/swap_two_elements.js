@@ -1,16 +1,15 @@
 //TODO: Write a function that swaps two numbers in a given array
 
-function swapNumbers(givenArray, index1, index2) {
+function swapNumbers(arr, index1, index2) {
   let temp = 0;
-  temp = givenArray[index1];
-  givenArray[index1] = givenArray[index2];
-  givenArray[index2] = temp;
-  return givenArray;
+  temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
+  return arr;
 }
 
-let arr = [8, 5, 7, 3, 2, 1]
+let givenArray = [8, 5, 7, 3, 2, 1]
 
-let finalSwapped = swapNumbers(arr, 0, 1);
-let finalSwapped2 = swapNumbers(arr, 1, 2);
+let finalSwapped2 = swapNumbers(givenArray, 1, 2);
 
-console.log(finalSwapped);
+console.log(finalSwapped2);

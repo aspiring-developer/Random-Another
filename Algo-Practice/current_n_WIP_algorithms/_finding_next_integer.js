@@ -3,22 +3,32 @@
 
 function nextIntegerFinder(receivingArray) {
 console.log(receivingArray + " <-- Initial array");
-let thePositiveInteger = 0;
-receivingArray.sort();
+let toBeFoundInteger = [];
+//receivingArray.sort();
 console.log(receivingArray + " <-- Sorted array");
 // Loop and find next sequential number.
 // Start from the first index and add 1 to it to find next number
-for(i = 0; i < receivingArray; i++) {
+for(i = 0; i < receivingArray.length; i++) {
+
+  if(toBeFoundInteger[receivingArray[i]]) {
+    toBeFoundInteger[receivingArray[i]]++;
+  } else {
+    toBeFoundInteger[receivingArray[i]] = 1;
+  }
+
 }
-
-
+return toBeFoundInteger;
 
 //console.log("Found Integer: --> " + thePositiveInteger);
 }
 
 
-let givenArray = [1, 3, 4, 2, 1, 6];
-let foundNumber = nextIntegerFinder(givenArray);
+let givenArray = ["1", "3", "4", "2", "1", "6"];
+console.log(nextIntegerFinder(givenArray));
+
 //console.log(nextIntegerFinder(foundNumber) + " --> from outside");
+
+
+
 
 
