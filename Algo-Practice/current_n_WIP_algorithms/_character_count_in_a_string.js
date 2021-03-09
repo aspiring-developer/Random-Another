@@ -1,13 +1,12 @@
 function countCharacter(str) {
   let charCount = [];
   for (i = 0; i < str.length; i++) {
-    let eachChar = str[i];
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    if (charCount[eachChar] > 0) {
-      charCount[eachChar]++;
+    if (charCount[str[i]] > 0) {
+      charCount[str[i]]++;
     } else {
-      charCount[eachChar] = 1;
+      charCount[str[i]] = 1;
     }
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -15,7 +14,7 @@ function countCharacter(str) {
   return charCount;
 }
 
-console.log(countCharacter("javascript"));
+console.table(countCharacter("javascript"));
 
 
 
