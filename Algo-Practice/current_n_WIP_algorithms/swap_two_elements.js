@@ -1,4 +1,4 @@
-// Write a function that swaps two numbers in a given array
+//TODO: Write a function that swaps two numbers in a given array
 
 function swapNumbers(givenArray, index1, index2) {
   let temp = 0;

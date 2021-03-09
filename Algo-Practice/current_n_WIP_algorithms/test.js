@@ -72,7 +72,7 @@ console.log("Final Result:" + finalResult);
 //      out = [],
 //      obj = {};
 
-//  for (i = 0; i < len; i++) {
+//  for (i = 0; i < arr.length; i++) {
 //    obj[arr[i]] = 0;
 //  }
 //  for (i in obj) {
