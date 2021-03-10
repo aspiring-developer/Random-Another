@@ -2,28 +2,25 @@
 ! *that does not occur in the array *constraints: 1 to 100,000 integers in the array; each element's value range is  -1,000,000 to 1,000,000  ###[1,3,6,4,1,2] should return 5 ###[1,2,3] should return 4 ###[-1,-3] should return 1*/
 
 function nextIntegerFinder(receivingArray) {
-console.log(receivingArray + " <-- Initial array");
-let toBeFoundInteger = [];
-//receivingArray.sort();
-console.log(receivingArray + " <-- Sorted array");
-// Loop and find next sequential number.
-// Start from the first index and add 1 to it to find next number
-for(i = 0; i < receivingArray.length; i++) {
+  console.log(receivingArray + " <-- Initial array");
+  let toBeFoundInteger = [];
+  //receivingArray.sort();
+  receivingArray.sort(function (a, b) { return a - b });
+  console.log(receivingArray + " <-- Sorted array");
 
-  if(toBeFoundInteger[receivingArray[i]]) {
-    toBeFoundInteger[receivingArray[i]]++;
-  } else {
-    toBeFoundInteger[receivingArray[i]] = 1;
+  for (i = 0; i < receivingArray.length; i++) {
+    if (receivingArray[i] === receivingArray[i] - 1 || receivingArray[i] + 1) {
+      toBeFoundInteger.push(receivingArray[i]);
+    }
+    else {
+      toBeFoundInteger.push(0);
+    }
   }
+  console.log(toBeFoundInteger)
+  return toBeFoundInteger;
 
 }
-return toBeFoundInteger;
-
-//console.log("Found Integer: --> " + thePositiveInteger);
-}
-
-
-let givenArray = ["1", "3", "4", "2", "1", "6"];
+let givenArray = [2, 4, 5, 1, 2, 3, 1, 5, 3];
 console.log(nextIntegerFinder(givenArray));
 
 //console.log(nextIntegerFinder(foundNumber) + " --> from outside");
