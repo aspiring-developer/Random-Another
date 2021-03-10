@@ -1,28 +1,24 @@
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* Test recursion
-function recursiveFunction(num) {
-let recursiveSum = 0;
-for(i = 0; i <= num; i++) {
-if(recursiveSum <= num) {
-  //recursiveSum += recursiveFunction(num )
+function isAnagram(str1, str2) {
+  let str1ToArray = [];
+  let str2ToArray = [];
 
+  //for (let i = 0, j = 0; i < str1.length, j < str2.length; i++, j++){
+  for (let i = 0; i < str2.length; i++){
+    //console.log("variable i: " + i);
+    //console.log("variable j: " + j);
 
-//console.log(recursiveSum);
-//recursiveSum += num[i] ;
-
-
-console.log(recursiveSum);
+  //str1ToArray.push(str1[i]);
+str2ToArray.push(str2[i]);
+  }
+  return str2ToArray;
 }
-}
-//console.log(recursiveFunction(num));
-return recursiveSum;
-}
+  let givenArray = ["hello", "namaste"];
+  console.log(isAnagram(givenArray));
 
-let givenNum = 10;
-console.log(recursiveFunction(givenNum) + " <-- Result")
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-/*
-num 10 -->
-1+2+3+4+5+6+7+8+9+10 = 55
-*/
+//* STUDY THIS:
+//for (var i = 0, j = 1, n = 2; i < 50, n < 50; i = i + 3, j = j + 3, n = n + 3){
+//  console.log("variable i: " + i);
+//  console.log("variable j: " + j);
+//  console.log("variable n: " + n);
+//}

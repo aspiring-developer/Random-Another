@@ -5,7 +5,7 @@
 //The unique element is 16.
 //* One way to solve this:
 function lonelyIntFinder(arr) {
-  let sortedArr = arr.sort(function(a, b) {return a - b});
+  let sortedArr = arr.sort(function (a, b) { return a - b });
   console.log(sortedArr + " <-- Sorted array for While Loop");
 
   let i = 0;
@@ -20,7 +20,7 @@ function lonelyIntFinder(arr) {
 let givenArray = [4, 7, 4, 3, 3, 16, 9, 7, 9];
 
 let finalResult = lonelyIntFinder(givenArray);
-console.log(finalResult + " <-- While Loop" );
+console.log(finalResult + " <-- While Loop");
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -41,8 +41,9 @@ function lonelyIntegerFinder(receivingArray) {
   }
   return lonelyInteger;
 }
-let givenArray2 = [2, 4, 5, 1, 2, 3, 1, 5, 3,4];
+let givenArray2 = [2, 4, 5, 1, 2, 3, 1, 3, 4, 5, 22, 23, 22];
 console.log(lonelyIntegerFinder(givenArray2) + " <-- For Loop");
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 
 
