@@ -1,18 +1,36 @@
 //* This test loop w/o function is working
-let str1 = "Hello";
-let str2 = "Namaste";
-let strArray1 = [];
-let strArray2 = [];
+function anagramCheck() {
+  let str1 = "hello";
+  let str2 = "ohlge";
+  let strArray1 = [];
+  let strArray2 = [];
 
+  // Convert str1 to array, sort and push
+  let sorted1 = str1.split('');
+  sorted1.sort()
+  strArray1.push(sorted1);
+  console.log(strArray1 + " <-- after sort");
 
+    // Convert str1 to array, sort and push
+    let sorted2 = str2.split('');
+    sorted2.sort()
+    strArray2.push(sorted2);
+    console.log(strArray2 + " <-- after sort");
 
-for (i = 0, j = 0; i < str1.length, j < str2.length; i++, j++) {
-  strArray1.push(str1[i]);
-  strArray2.push(str2[i]);
-  let sorted1 = str1.sort();
 }
-console.log("String 1 array: --> " + [strArray1]);
-console.log("String 2 array: --> " + [strArray2]);
+anagramCheck();
+
+
+
+//for (i = 0, j = 0; i < str1.length, j < str2.length; i++, j++) {
+//  strArray1.push(str1[i]);
+//  //strArray2.push(str2[i]);
+//  let s1 = strArray1.sort();
+//  console.log(s1)
+
+//}
+//console.log("String 1 array: --> " + [strArray1]);
+//console.log("String 2 array: --> " + [strArray2]);
 
 //* Function trial
 //function anagramFinder(str1, str2) {
