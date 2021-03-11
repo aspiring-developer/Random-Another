@@ -1,59 +1,38 @@
-//* This test loop w/o function is working
-function anagramCheck() {
-  let str1 = "hello";
-  let str2 = "ohlge";
+function anagramCheck(str1, str2) {
   let strArray1 = [];
   let strArray2 = [];
 
   // Convert str1 to array, sort and push
   let sorted1 = str1.split('');
-  sorted1.sort()
+  sorted1.sort();
   strArray1.push(sorted1);
-  console.log(strArray1 + " <-- after sort");
+  console.log(strArray1 + " <-- after str1 sort");
 
-    // Convert str1 to array, sort and push
-    let sorted2 = str2.split('');
-    sorted2.sort()
-    strArray2.push(sorted2);
-    console.log(strArray2 + " <-- after sort");
+  // Convert str1 to array, sort and push
+  let sorted2 = str2.split('');
+  sorted2.sort();
+  strArray2.push(sorted2);
+  console.log(strArray2 + " <-- after str2 sort");
 
+  for (let i = 0; i < strArray1.length; i++) {
+    console.log(strArray1); //* This shows array
+    //console.log(strArray1.length); //* This is not working; shows 1
+    if (strArray1[i].indexOf(strArray2[i] === - 1)) {
+      //if (strArray1[i] !== strArray2[i]) {
+      console.log(strArray1[i].indexOf(strArray2[i]) + " <-- checking index");
+      return "False";
+    }
+    return "True";
+  }
 }
-anagramCheck();
+console.log(anagramCheck("hello", "ohlle"));
+
+/* "hello"  "ohlle"   "ohgge" */
 
 
 
-//for (i = 0, j = 0; i < str1.length, j < str2.length; i++, j++) {
-//  strArray1.push(str1[i]);
-//  //strArray2.push(str2[i]);
-//  let s1 = strArray1.sort();
-//  console.log(s1)
-
-//}
-//console.log("String 1 array: --> " + [strArray1]);
-//console.log("String 2 array: --> " + [strArray2]);
-
-//* Function trial
-//function anagramFinder(str1, str2) {
-//  let strArray1 = [];
-//  let strArray2 = [];
-
-
-//}
-//console.log(anagramFinder("gfHezallo", "drbkkmnjs"));
-//console.log(anagramFinder("gfHezallo", "Hefgolalz"));
-
-
-
-//if(strArray1.indexOf(str2[j]) === -1 || strArray2.indexOf(str1[i]) === -1) {
-//  return "False";
-//}
-//else {
-//  return "True";
-//}
-
-
-
-
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//! IGNORE CODES BELOW
 //* Partially Working
 //function anagramFinder(str1, str2) {
 //  var i, j;
