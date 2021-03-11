@@ -11,6 +11,8 @@ console.log(str2ToArray)
 }
 let givenArray = ["hello", "namaste"];
 console.log(isAnagram(givenArray));
+
+
 //Declare 2 arrays
 //use for loop to insert into arrays
 //Sort both arrays
