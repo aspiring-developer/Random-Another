@@ -10,7 +10,8 @@ function maxFinder(receivingNumbers) {
   return maxNumber;
 }
 
-let givenNumbers = [-100, 1, 5, 3, 7, 40, 9, 10, 265, 11]
+let givenNumbers = [-100, 1, 5, 3, 7, 40, 9, 10, 111]
 
 let foundMaxNumber = maxFinder(givenNumbers);
 console.log(` Found Max Number: -->  ${foundMaxNumber} `);
+
