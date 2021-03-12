@@ -1,38 +1,31 @@
-function anagramCheck(str1, str2) {
-  let strArray1 = [];
-  let strArray2 = [];
+//TODO: Compare two arrays and find unique values (element that only exists in one array):
 
-  for (let i = 0; i < str1.length; i++) {
-    strArray1.push(str1[i]);
-    strArray2.push(str2[i]);
-  }
+const arrayOne = [2, 1, 4, 5, 7, 3, 8, 1, 9, 10, 12, 13, 15];
+const arrayTwo = [3, 7, 1, 12, 9, 5, 24, 16];
 
-  console.log(strArray1);
-  console.log(strArray2);
-
-  strArray1.sort();
-  strArray2.sort();
-
-  console.log(strArray1);
-  console.log(strArray2);
-
-
-
-  let result = '';
-
-  for (let i = 0; i < strArray1.length; i++) {
-    console.log(strArray1[i] + " <-- from 1");
-    console.log(strArray2[i] + " <-- from 2");
-    //if (JSON.stringify(strArray1[i]) !== JSON.stringify(strArray2[i])) {
-    if (strArray1 !== strArray2[i]) {
-result = "Not equal";
-      //return false;
+//* Comparing first array to second
+function compareFirstToSecond(firstArr, secondArr) {
+  result1 = [];
+  for (i = 0; i < firstArr.length; i++) {
+    if (secondArr.indexOf(firstArr[i]) === -1) {
+      result1.push(firstArr[i]);
     }
-    result = "Equal";
-    //return true;
-
-
   }
-  return result;
+  return result1;
 }
-  console.log(anagramCheck("shiva", "hiavm"));
+console.log("Final: --> " + compareFirstToSecond(arrayOne, arrayTwo));
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* Comparing second array to first
+function compareSecondToFirst(firstArr, secondArr) {
+  result2 = [];
+  for (i = 0; i < secondArr.length; i++) {
+    if (firstArr.indexOf(secondArr[i]) === -1) {
+      result2.push(secondArr[i]);
+    }
+  }
+  return result2;
+}
+console.log("Final: --> " + compareSecondToFirst(arrayOne, arrayTwo));
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+

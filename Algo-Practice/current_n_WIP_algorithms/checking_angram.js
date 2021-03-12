@@ -2,8 +2,7 @@ function anagramCheck(str1, str2) {
   let strArray1 = [];
   let strArray2 = [];
 
-  //THis is sujans
-  for (let i = 0; i < str1.length; i++) {
+   for (let i = 0; i < str1.length; i++) {
     strArray1.push(str1[i]);
     strArray2.push(str2[i]);
   }
