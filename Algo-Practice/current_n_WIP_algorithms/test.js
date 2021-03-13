@@ -1,26 +1,49 @@
-//Find first non-repeating character in a string
+//TODO: Find first non-repeating character in a string
 
 function firstLonelyChar(str) {
   let foundCharacter;
+
   for (let i = 0; i < str.length; i++) {
+    console.log(str.charAt(i) + " <--CharAt value");
     foundCharacter = str.charAt(i);
+
     if (str.indexOf(foundCharacter) === i && str.indexOf(foundCharacter, i + 1) === -1) {
-      console.log(foundCharacter);
+      console.log("...............\n" + foundCharacter + " <--Found Character" + "\n...............");
       return foundCharacter;
     }
-    else {
-      return null;
-    }
+    //else {
+    //  return null;
+    //}
   }
-
+  return null;
 }
+
 let givenString = "bbaargh";
-console.log(`${firstLonelyChar(givenString)} <-- Result `);
+console.log(` ${firstLonelyChar(givenString)} <--Final Result `);
 
 
 
 
-//apple -> a
-//str.indexOf('a', 1)
-//var one = 0;
-//var two = str.indexOf('a', 0+1);
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//* WORKING CODES BELOW
+//function firstLonelyChar(str) {
+//  let foundCharacter;
+//  for (let i = 0; i < str.length; i++) {
+//    console.log(str.charAt(i));
+
+//    foundCharacter = str.charAt(i);
+//   // console.log(str.charAt(i));
+//    if (str.indexOf(foundCharacter) === i && str.indexOf(foundCharacter, i + 1) === -1) {
+//      //console.log(foundCharacter);
+//      return foundCharacter;
+//    }
+//    //else {
+//    //  return null;
+//    //}
+//  }
+//  return null;
+//}
+//let givenString = "bbaargh";
+//console.log(` ${firstLonelyChar(givenString)} <--Result `);
+
