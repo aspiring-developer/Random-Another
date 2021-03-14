@@ -1,49 +1,36 @@
-//TODO: Find first non-repeating character in a string
+//TODO: Vowel and Consonant <Finder></Finder>
 
-function firstLonelyChar(str) {
-  let foundCharacter;
-
-  for (let i = 0; i < str.length; i++) {
-    console.log(str.charAt(i) + " <--CharAt value");
-    foundCharacter = str.charAt(i);
-
-    if (str.indexOf(foundCharacter) === i && str.indexOf(foundCharacter, i + 1) === -1) {
-      console.log("...............\n" + foundCharacter + " <--Found Character" + "\n...............");
-      return foundCharacter;
+function vowelFinder(str, vowels) {
+  let foundVowels = [];
+  //let strArr = Array.from(str);
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr.indexOf(vowels[i]) !== -1) {
+      foundVowels.push(vowels[i]);
     }
-    //else {
-    //  return null;
-    //}
   }
-  return null;
+  console.log(foundVowels + " <--foundVowels outside for")
+  return foundVowels;
 }
-
-let givenString = "bbaargh";
-console.log(` ${firstLonelyChar(givenString)} <--Final Result `);
-
-
-
+let givenVowels = ["a", "e", "i", "o", "u"];
+let givenString = "You tea";
+//let givenString = ["y", "o", "u", "t", "e", "a"];
+console.log(vowelFinder(givenString, givenVowels) + " <--Result");
 
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//* WORKING CODES BELOW
-//function firstLonelyChar(str) {
-//  let foundCharacter;
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+//* Working with both direct arrays
+//function vowelFinder(str, vowels) {
+//  let foundVowels = [];
+//  //let str = Array.from(str);
 //  for (let i = 0; i < str.length; i++) {
-//    console.log(str.charAt(i));
-
-//    foundCharacter = str.charAt(i);
-//   // console.log(str.charAt(i));
-//    if (str.indexOf(foundCharacter) === i && str.indexOf(foundCharacter, i + 1) === -1) {
-//      //console.log(foundCharacter);
-//      return foundCharacter;
+//    if (str.indexOf(vowels[i]) !== -1) {
+//      foundVowels.push(vowels[i]);
 //    }
-//    //else {
-//    //  return null;
-//    //}
 //  }
-//  return null;
+//  console.log(foundVowels + " <--foundVowels outside for")
+//  return foundVowels;
 //}
-//let givenString = "bbaargh";
-//console.log(` ${firstLonelyChar(givenString)} <--Result `);
-
+//let givenVowels = ["a", "e", "i", "o", "u"];
+////let givenString = "You tea";
+//let givenString = ["y", "o", "u", "t", "e", "a"];
+//console.log(vowelFinder(givenString, givenVowels) + " <--Result");
