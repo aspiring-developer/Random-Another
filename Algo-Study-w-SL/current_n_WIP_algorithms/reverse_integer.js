@@ -2,20 +2,19 @@
 
 function reverseInteger(num) {
   let reversedNum = 0;
+  let remainder = 0;
 
   while (num != 0) {
-    let remainder = num % 10;
+    remainder = num % 10;
     reversedNum = reversedNum * 10 + remainder;
-    console.log(num);
+    //console.log(num + " <-- before math");
     num = Math.floor(num / 10);
+    //console.log(num + " <-- after math");
   }
-  console.log(num);
   return reversedNum;
 }
 
-console.log(reverseInteger(8563));
-
-
+console.log(reverseInteger(9124));
 
 //! NOT THE BEST WAY, BUT IT IS ANOTHER WAY --- ONLY for Study Purpose
 function reverseInt(receivingNum) {
