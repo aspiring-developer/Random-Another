@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test-2</title>
+</head>
+<body>
+  <!--<script>
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+
+  </script>-->
+<!--<script>
+function outer(){
+  let counter = 0;
+  function incrementCounter() {
+    alert(counter++);
+  }
+return incrementCounter;
+}
+const myNewFunction = outer();
+//myNewFunction();
+myNewFunction();
+//console.log(myNewFunction() + " <--Calling myNewFunction()");
+</script>-->
+
+<!--<script>
+  function makeFunc() {
+  var name2 = 'FF';
+  function displayName2() {
+    alert(name2);
+  }
+  return displayName2;
+}
+
+var myFunc = makeFunc();
+myFunc();
+</script>-->
+
+<script>
+  function Counter() {
+    var counter = 0;
+
+    function IncreaseCounter() {
+        return counter += 1;
+    };
+
+    return IncreaseCounter;
+}
+
+var counter2 = Counter();
+alert(counter2()); // 1
+alert(counter2()); // 2
+alert(counter2()); // 3
+alert(counter2()); // 4
+</script>
+
+</body>
+</html>
