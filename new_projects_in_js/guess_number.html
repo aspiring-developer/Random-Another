@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>completed 23</title>
+</head>
+
+<body>
+  <script>
+
+    function playMode(item) {
+      let rightCount = 0;
+      let wrongCount = 0;
+
+      let randomize = Math.floor(Math.random() * item.length);
+      let randomizedResult = (item[randomize]);
+      console.log(randomizedResult);
+
+      while (rightCount + wrongCount >= 0) {
+        let userPrompt = prompt("Guess the number (1 or 2 or 3 or 4) 4 times AND check console window for result.");
+
+        if (userPrompt == randomizedResult) {
+          rightCount++;
+          console.log(rightCount + " <--rightCount count");
+        }
+
+        if (userPrompt != randomizedResult) {
+          wrongCount++;
+          console.log(wrongCount + " <--wrongCount count");
+        }
+
+        if (rightCount + wrongCount == 4) {
+          console.log("Your turn is over. You received--> " + wrongCount + " Wrong Count and " + rightCount + " Right Count.")
+          return;
+        }
+      }
+      return;
+    }
+
+    let itemsArray = [1,2,3,4];
+    console.log(playMode(itemsArray))
+
+
+  </script>
+</body>
+
+</html>
